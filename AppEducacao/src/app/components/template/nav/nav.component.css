@@ -1,0 +1,16 @@
+#listagem {
+    margin-top: 5px;    
+}
+
+.nav-link.active-home {
+    color: #495057;
+    background-color: #fff;
+    border-color: #dee2e6 #dee2e6 #fff;
+    border-top-color: rgb(222, 226, 230);
+    border-right-color: rgb(222, 226, 230);
+    border-bottom-color: rgb(255, 255, 255);
+    border-left-color: rgb(222, 226, 230);
+    border-left-width: 0px;
+    border-top-left-radius: 0;
+}
+

@@ -1,0 +1,30 @@
+<app-info-pagina></app-info-pagina>
+<div class="base-corpo">
+    <table class="table table-bordered table-hover table-sm">
+        <thead class="thead-light">
+            <tr>
+                <th scope="col">Cód. Escola</th>
+                <th scope="col">Nome</th>
+                <th scope="col">Bairro</th>
+                <th scope="col">CNPJ</th>
+                <th scope="col">Ações</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let item of escolas">
+                <th scope="row">{{item.idEscola}}</th>
+                <td>{{item.nome}}</td>
+                <td>{{item.bairro}}</td>
+                <td>{{formatarCnpj(item.cnpj)}}</td>
+                <td>
+                    <a routerLink="/escolas/create/{{item.idEscola}}">
+                        <span class="fas fa-edit"></span>
+                    </a>
+                    <a routerLink="/escolas/delete/{{item.idEscola}}">
+                        <span class="fas fa-trash"></span>
+                    </a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

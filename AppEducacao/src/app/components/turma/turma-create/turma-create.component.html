@@ -1,0 +1,38 @@
+<app-info-pagina></app-info-pagina>
+<div class="base-corpo">
+    <form action="">
+        <div class="form-group">
+            <label for="escola">Nome da Escola</label>
+            <select class="form-control" [(ngModel)]="turma.escola" name="escola">
+                <option disabled>Selecione uma escola</option>
+                <option *ngFor="let e of escolas" [ngValue]="e">
+                    {{ e.nome }}
+                </option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="anoLetivo">Ano Letivo</label>
+            <input type="text" class="form-control" [(ngModel)]="turma.anoLetivo" name="anoLetivo" maxlength="10">
+        </div>
+        <div class="form-group">
+            <label for="codTurma">Código da Turma</label>
+            <input type="text" class="form-control" [(ngModel)]="turma.codTurma" name="codTurma" maxlength="5">
+        </div>
+        <div class="form-group">
+            <label for="disciplina">Disciplina</label>
+            <input type="text" class="form-control" [(ngModel)]="turma.disciplina" name="disciplina" maxlength="50">
+        </div>
+        <div class="form-group">
+            <label for="nomeProfessor">Nome do Professor</label>
+            <input type="text" class="form-control" [(ngModel)]="turma.nomeProfessor" name="nomeProfessor"
+                maxlength="100">
+        </div>
+        <div class="form-group">
+            <label for="turno">Turno</label>
+            <input type="text" class="form-control" [(ngModel)]="turma.turno" name="turno" maxlength="10">
+        </div>
+
+        <button type="button" class="btn btn-primary btn-espaco" (click)=salvar()>Salvar</button>
+        <button type="button" class="btn btn-warning" (click)=redireciona()>Cancelar</button>
+    </form>
+</div>

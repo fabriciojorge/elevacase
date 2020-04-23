@@ -1,0 +1,31 @@
+<app-info-pagina></app-info-pagina>
+<div class="base-corpo">
+    <form action="">
+        <div class="form-group">
+            <label for="nome">Nome da escola</label>
+            <input type="text" disabled class="form-control" [(ngModel)]="escola.nome" name="nome">
+        </div>
+        <div class="form-group">
+            <label for="logradouro">Endereço</label>
+            <input type="text" disabled class="form-control" [(ngModel)]="escola.logradouro" name="logradouro">
+        </div>
+        <div class="form-group">
+            <label for="numero">Numero</label>
+            <input type="number" disabled class="form-control" [(ngModel)]="escola.numero" name="numero">
+        </div>
+        <div class="form-group">
+            <label for="bairro">Bairro</label>
+            <input type="text" disabled class="form-control" [(ngModel)]="escola.bairro" name="bairro">
+        </div>
+        <div class="form-group">
+            <label for="cep">CEP</label>
+            <input type="text" class="form-control" [(ngModel)]="escola.cep" name="cep" [textMask]="{mask: maskCEP}">
+        </div>
+        <div class="form-group">
+            <label for="cnpj">CNPJ</label>
+            <input type="text" disabled class="form-control" [(ngModel)]="escola.cnpj" name="cnpj" [textMask]="{mask: maskCNPJ}">
+        </div>
+        <button type="button" class="btn btn-danger btn-espaco" (click)=excluirEscola()>Excluir</button>
+        <button type="button" class="btn btn-warning" (click)=redireciona()>Cancelar</button>
+    </form>
+</div>

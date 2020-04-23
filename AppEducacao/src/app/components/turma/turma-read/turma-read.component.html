@@ -1,0 +1,30 @@
+<app-info-pagina></app-info-pagina>
+<div class="base-corpo">
+    <table class="table table-bordered table-hover table-sm">
+        <thead class="thead-light">
+            <tr>
+                <th scope="col">Escola</th>
+                <th scope="col">Ano Letivo</th>
+                <th scope="col">Cód. Turma</th>
+                <th scope="col">Disciplina</th>
+                <th scope="col">Ações</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let item of turmas">
+                <td>{{item.escola.nome}}</td>
+                <td>{{item.anoLetivo}}</td>
+                <td>{{item.codTurma}}</td>
+                <td>{{item.disciplina}}</td>
+                <td>
+                    <a routerLink="/turmas/create/{{item.idTurma}}">
+                        <span class="fas fa-edit"></span>
+                    </a>
+                    <a routerLink="/turmas/delete/{{item.idTurma}}">
+                        <span class="fas fa-trash"></span>
+                    </a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

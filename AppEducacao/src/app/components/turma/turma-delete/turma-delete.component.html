@@ -1,0 +1,32 @@
+<app-info-pagina></app-info-pagina>
+<div class="base-corpo">
+    <form action="">
+         <div class="form-group">
+            <label for="escola">Nome da Escola</label>            
+            <input type="text" class="form-control" [(ngModel)]="turma.escola.nome" name="escola" disabled>
+        </div>         
+        <div class="form-group">
+            <label for="anoLetivo">Ano Letivo</label>
+            <input type="text" class="form-control" [(ngModel)]="turma.anoLetivo" name="anoLetivo" disabled>
+        </div>
+        <div class="form-group">
+            <label for="codTurma">Código da Turma</label>
+            <input type="text" class="form-control" [(ngModel)]="turma.codTurma" name="codTurma" disabled>
+        </div>
+        <div class="form-group">
+            <label for="disciplina">Disciplina</label>
+            <input type="text" class="form-control" [(ngModel)]="turma.disciplina" name="disciplina" disabled>
+        </div>
+        <div class="form-group">
+            <label for="nomeProfessor">Nome do Professor</label>
+            <input type="text" class="form-control" [(ngModel)]="turma.nomeProfessor" name="nomeProfessor" disabled>
+        </div>
+        <div class="form-group">
+            <label for="turno">Turno</label>
+            <input type="text" class="form-control" [(ngModel)]="turma.turno" name="turno" disabled>
+        </div>
+
+        <button type="button" class="btn btn-danger btn-espaco" (click)=excluirEscola()>Excluir</button>
+        <button type="button" class="btn btn-warning" (click)=redireciona()>Cancelar</button>
+    </form>
+</div>

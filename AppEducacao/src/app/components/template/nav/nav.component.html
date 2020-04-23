@@ -1,0 +1,26 @@
+  <div class="card">
+      <ul id="listagem" class="nav nav-tabs">
+          <li class="nav-item">
+              <a class="nav-link active-home" routerLink="">Home</a>
+          </li>
+          <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
+                  aria-expanded="false">Escolas</a>
+              <div class="dropdown-menu">
+                  <a class="dropdown-item" routerLink="/escolas/read">Listar Escolas</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" routerLink="/escolas/create">Cadastrar Escolas</a>
+              </div>
+          </li>
+          <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
+                  aria-expanded="false">Turmas</a>
+              <div class="dropdown-menu">
+                  <a class="dropdown-item" routerLink="/turmas/read">Listar Turmas</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" routerLink="/turmas/create">Cadastrar Turmas</a>
+              </div>
+          </li>
+      </ul>
+      <router-outlet></router-outlet>
+  </div>

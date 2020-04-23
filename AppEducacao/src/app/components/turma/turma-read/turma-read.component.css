@@ -1,0 +1,11 @@
+a>.fa-edit {
+    margin-right: 10px;
+}
+
+a .fa-edit {
+    color: gray;
+}
+
+a .fa-trash {
+    color: red;
+}

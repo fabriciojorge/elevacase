@@ -1,0 +1,33 @@
+<app-info-pagina></app-info-pagina>
+<div class="base-corpo">
+    <form action="">
+        <div class="form-group">
+            <label for="nome">Nome da escola</label>
+            <input type="text" class="form-control" [(ngModel)]="escola.nome" name="nome" maxlength="100">
+        </div>
+        <div class="form-group">
+            <label for="logradouro">Endereço</label>
+            <input type="text" class="form-control" [(ngModel)]="escola.logradouro" name="logradouro" maxlength="200">
+        </div>
+        <div class="form-group">
+            <label for="numero">Numero</label>
+            <input type="number" class="form-control" [(ngModel)]="escola.numero" name="numero" min="0" max="99999">
+        </div>
+        <div class="form-group">
+            <label for="bairro">Bairro</label>
+            <input type="text" class="form-control" [(ngModel)]="escola.bairro" name="bairro" maxlength="50">
+        </div>
+        <div class="form-group">
+            <label for="cep">CEP</label>
+            <input type="text" class="form-control" [(ngModel)]="escola.cep" name="cep" placeholder="00000-000"
+                [textMask]="{mask: maskCEP}" maxlength="10">
+        </div>
+        <div class="form-group">
+            <label for="cnpj">CNPJ</label>
+            <input type="text" class="form-control" [(ngModel)]="escola.cnpj" name="cnpj"
+                placeholder="00.000.000/0000-00" [textMask]="{mask: maskCNPJ}" maxlength="20">
+        </div>
+        <button type="button" class="btn btn-primary btn-espaco" (click)=salvar()>Salvar</button>
+        <button type="button" class="btn btn-warning" (click)=redireciona()>Cancelar</button>
+    </form>
+</div>

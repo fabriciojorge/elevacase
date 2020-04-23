@@ -1,0 +1,9 @@
+i {
+    color: black;
+    margin-right: 15px;
+    font-size: 1.35rem;
+}
+
+.card-body {
+    display: flex;
+}
